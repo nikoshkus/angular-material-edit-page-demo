@@ -1,4 +1,4 @@
 <div class="header col-sm-12">
-  <div *ngFor="let item of buildHeaderItems()">{{ item.label }}: {{ item!.value }}</div>
+  <div *ngFor="let item of buildHeaderItems()"><span class="font-Roboto">{{ item.label }}</span>: <span class="font-Roboto">{{ item!.value }}</span></div>
   <ng-content></ng-content>
 </div>

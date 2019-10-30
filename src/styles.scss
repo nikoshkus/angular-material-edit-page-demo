@@ -12,41 +12,49 @@ $theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
 @include angular-material-theme($theme);
 
-$custom-typography: mat-typography-config(
-  $font-family: 'Roboto-v0.100',
-  $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500)
-);
-
 @font-face{
   font-family:"Roboto-v0.100";
-  src:local(Roboto Thin),url("assets/fonts/roboto/Roboto-Thin.eot");
-  src:url("assets/fonts/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"),url("assets/fonts/roboto/Roboto-Thin.woff2") format("woff2"),url("assets/fonts/roboto/Roboto-Thin.woff") format("woff"),url("assets/fonts/roboto/Roboto-Thin.ttf") format("truetype");
+  src: url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Thin.eot");
+  src: url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"),
+  url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/roboto/Roboto-Thin.woff2") format("woff2"),
+  url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Thin.woff") format("font-woff"),
+  url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Thin.ttf") format("truetype");
   font-weight:200
 }
 @font-face{
   font-family:"Roboto-v0.100";
-  src:local(Roboto Light),url("assets/fonts/roboto/Roboto-Light.eot");
-  src:url("assets/fonts/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"),url("assets/fonts/roboto/Roboto-Light.woff2") format("woff2"),url("assets/fonts/roboto/Roboto-Light.woff") format("woff"),url("assets/fonts/roboto/Roboto-Light.ttf") format("truetype");
+  src: url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Light.eot");
+  src: url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"),
+  url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Light.woff2") format("woff2"),
+  url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Light.woff") format("font-woff"),
+  url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Light.ttf") format("truetype");
   font-weight:300
 }
 @font-face{
   font-family:"Roboto-v0.100";
-  src:local(Roboto Regular),url("assets/fonts/roboto/Roboto-Regular.eot");
-  src:url("assets/fonts/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"),url("assets/fonts/roboto/Roboto-Regular.woff2") format("woff2"),url("assets/fonts/roboto/Roboto-Regular.woff") format("woff"),url("assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  src: url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Regular.eot");
+  src: url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+  url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Regular.woff2") format("woff2"),
+  url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Regular.woff") format("font-woff"),
+  url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Regular.ttf") format("truetype");
   font-weight:400
 }
 @font-face{
   font-family:"Roboto-v0.100";
-  src:url("assets/fonts/roboto/Roboto-Medium.eot");
-  src:url("assets/fonts/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"),url("assets/fonts/roboto/Roboto-Medium.woff2") format("woff2"),url("assets/fonts/roboto/Roboto-Medium.woff") format("woff"),url("assets/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  src:url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Medium.eot");
+  src:url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"),url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Medium.woff2") format("woff2"),url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Medium.woff") format("font-woff"),url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Medium.ttf") format("truetype");
   font-weight:500
 }
 @font-face{
   font-family:"Roboto-v0.100";
-  src:url("assets/fonts/roboto/Roboto-Bold.eot");
-  src:url("assets/fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"),url("assets/fonts/roboto/Roboto-Bold.woff2") format("woff2"),url("assets/fonts/roboto/Roboto-Bold.woff") format("woff"),url("assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  src:url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Bold.eot");
+  src:url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"),url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Bold.woff2") format("woff2"),url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Bold.woff") format("font-woff"),url("https://www.geneanexus.com/resources/materialize-v0.100.2/fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight:700
 }
 
+$custom-typography: mat-typography-config(
+  $font-family: "Roboto-v0.100"
+);
+
 @include angular-material-typography($custom-typography);
+@include mat-core($custom-typography);
