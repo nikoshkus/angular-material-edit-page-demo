@@ -2,13 +2,21 @@
 
 html, body { height: 100%; }
 body { margin: 0;}
+
 @import '~@angular/material/theming';
 @include mat-core();
 $app-primary: mat-palette($mat-blue);
 $app-accent:  mat-palette($mat-pink);
 $app-warn:    mat-palette($mat-red);
 $theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
 @include angular-material-theme($theme);
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto-v0.100',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
 
 @font-face{
   font-family:"Roboto-v0.100";
@@ -40,3 +48,5 @@ $theme: mat-light-theme($app-primary, $app-accent, $app-warn);
   src:url("assets/fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"),url("assets/fonts/roboto/Roboto-Bold.woff2") format("woff2"),url("assets/fonts/roboto/Roboto-Bold.woff") format("woff"),url("assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight:700
 }
+
+@include angular-material-typography($custom-typography);
