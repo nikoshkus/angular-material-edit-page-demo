@@ -1,0 +1,52 @@
+.file-uploader {
+  height: 164px;
+  border: blue 1px solid;
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+:host .row {
+  height: 2.7em;
+}
+
+.fix-margin {
+  margin-top: 1em!important;
+}
+
+:host(mat-form-field) .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+mat-form-field div {
+  border: 0!important;
+}
+
+.task-template {
+  font-size: 13px;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row, .row div {
+  margin: 0;
+  padding: 0;
+}
+
+.previous {
+  padding-right: 20px!important;
+}
+
+.mat-basic-chip {
+  font-size: 13px;
+  margin-right: 3px;
+  padding: 2px;
+  border: solid 1px rgb(241, 241, 241);
+  border-radius: 5px;
+  background: lightgrey;
+}

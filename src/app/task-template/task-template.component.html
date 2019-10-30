@@ -1,0 +1,330 @@
+<div class="task-template">
+  <div class="middle-sm">
+    <div class="file-uploader">
+      File uploader
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Title:</div>
+      <div class="col-sm-9 ">
+        <mat-form-field>
+          <input  [value]="'Minion Rush'" #titleInput matInput 
+          
+          >
+          <!-- <mat-error *ngIf="emailFormControl && emailFormControl.hasError('required')">
+            Title is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <div class="col-sm-3 label">HQ Producer:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [formControl]="ggiCtrl" #singleSelect>
+            <mat-select-search [formControl]="ggiFilterCtrl"></mat-select-search>
+            <mat-option *ngFor="let ggi of filteredGGI | async" [value]="ggi">
+              {{ggi.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Subtitle:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'Despicable Me Official Game'">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <div class="col-sm-3 label">Local Producers:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [formControl]="lpMultiCtrl" [multiple]="true">
+            <mat-select-search [formControl]="lpMultiFilterCtrl"></mat-select-search>
+            <mat-option *ngFor="let lp of filteredLpMulti | async" [value]="lp">
+              {{lp.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">GGI:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [formControl]="ggiCtrl" #singleSelect>
+            <mat-select-search [formControl]="ggiFilterCtrl"></mat-select-search>
+            <mat-option *ngFor="let ggi of filteredGGI | async" [value]="ggi">
+              {{ggi.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <div class="col-sm-3 label">Development Location:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [formControl]="lpMultiCtrl" [multiple]="true">
+            <mat-select-search [formControl]="lpMultiFilterCtrl"></mat-select-search>
+            <mat-option *ngFor="let lp of filteredLpMulti | async" [value]="lp">
+              {{lp.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Bussiness Model:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [formControl]="ggiCtrl" #singleSelect>
+            <mat-select-search [formControl]="ggiFilterCtrl"></mat-select-search>
+            <mat-option *ngFor="let ggi of filteredGGI | async" [value]="ggi">
+              {{ggi.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <div class="col-sm-3 label">Application Language:</div>
+      <div class="col-sm-9">
+        <mat-chip-list disabled>
+          <mat-basic-chip disabled>Albanian</mat-basic-chip>
+          <mat-basic-chip disabled>Spain</mat-basic-chip>
+          <mat-basic-chip disabled>English</mat-basic-chip>
+          <mat-basic-chip disabled>Polish</mat-basic-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Submission Type Model:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [formControl]="ggiCtrl" #singleSelect>
+            <mat-select-search [formControl]="ggiFilterCtrl"></mat-select-search>
+            <mat-option *ngFor="let ggi of filteredGGI | async" [value]="ggi">
+              {{ggi.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <div class="col-sm-3 label">Orientation:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [formControl]="lpMultiCtrl"
+                      [multiple]="true"
+                      matTooltip="{{getItems()}}"
+          >
+            <mat-select-search [formControl]="lpMultiFilterCtrl"></mat-select-search>
+            <mat-option *ngFor="let lp of filteredLpMulti | async" [value]="lp">
+              {{lp.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">GE update Number::</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'U52'">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <div class="col-sm-3 label">IGP/NONIGP:</div>
+      <div class="col-sm-9">
+        <label class="mat-slide-toggle-label">
+          <span class="mat-slide-toggle-content">NONIGP</span><span>&nbsp;</span>
+          <mat-slide-toggle [color]="'primary'">IGP</mat-slide-toggle>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Reset iOS Summary Rating:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [formControl]="ggiCtrl" #singleSelect>
+            <mat-select-search [formControl]="ggiFilterCtrl"></mat-select-search>
+            <mat-option *ngFor="let ggi of filteredGGI | async" [value]="ggi">
+              {{ggi.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <div class="col-sm-3 label">IGP code:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'iPhone: MRFR; iPad MRFI'">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Active CRM Campaign:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [value]="1">
+            <mat-option *ngFor="let choice of [{id:1, name: 'Yes'}, {id:0, name: 'No'}] " [value]="choice.id">
+              {{choice.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <div class="col-sm-3 label">Minimum OS Version:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'9.0'">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">New IAPs to submit:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [value]="0">
+            <mat-option *ngFor="let choice of [{id:1, name: 'Yes'}, {id:0, name: 'No'}] " [value]="choice.id">
+              {{choice.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <div class="col-sm-3 label">SVN project tag:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'https://svn02/vc/despicable_iphone/ports/ios/tags/v680d'">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Platform:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <mat-select [formControl]="ggiCtrl" #singleSelect>
+            <mat-select-search [formControl]="ggiFilterCtrl"></mat-select-search>
+            <mat-option *ngFor="let ggi of filteredGGI | async" [value]="ggi">
+              {{ggi.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <div class="col-sm-3 label">Additional information (Review notes, other notes):</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'Active CRM Campaign - World Live'">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">App version:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'6.8.0'">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <mat-checkbox [color]="'primary'" class="example-margin" [checked]="1">App extensions</mat-checkbox>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Build number:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'6.8.3'">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <mat-checkbox [color]="'primary'" class="example-margin" [indeterminate]="1" [disabled]="'true'">Game Center enabled</mat-checkbox>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">App internal version:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'6.8.0d'">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <mat-checkbox [color]="'primary'" class="example-margin" >Achievements / Leaderboards to be submitted</mat-checkbox>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Game Client ID:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input [readonly]="true" matInput [value]="'3493:71465:6.8.0d:ios:appstore'">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <mat-checkbox [color]="'primary'" class="example-margin" [checked]="1">Contains in-app purchases</mat-checkbox>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Application file name:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'DM_Apple_iPhone_iPad_iPodtouch_ML_IGP_MS_TS_Online_Gameloft_Distribution_v680d.ipa'">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <mat-checkbox [color]="'primary'" class="example-margin" [checked]="1">Facebook Connect</mat-checkbox>
+    </div>
+  </div>
+  <div class="row middle-sm flex-row">
+    <div class="row col-sm-6 middle-sm previous">
+      <div class="col-sm-3 label">Build size:</div>
+      <div class="col-sm-9">
+        <mat-form-field>
+          <input matInput [value]="'187'">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row col-sm-6 middle-sm">
+      <mat-checkbox [color]="'primary'" class="example-margin" [checked]="0">Phased release</mat-checkbox>
+    </div>
+  </div>
+</div>

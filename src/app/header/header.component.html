@@ -1,0 +1,4 @@
+<div class="header col-sm-12">
+  <div *ngFor="let item of buildHeaderItems()">{{ item.label }}: {{ item!.value }}</div>
+  <ng-content></ng-content>
+</div>

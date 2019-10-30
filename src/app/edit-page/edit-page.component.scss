@@ -1,0 +1,22 @@
+$toolbar-height: 34px;
+
+.task-edit {
+  margin-top: 0px;
+  font-size: 13px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 500;
+  top: $toolbar-height;
+  right: 0;
+  width: 85%;
+  height: calc(100vh - $toolbar-height);
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 3px;
+}
+
+.z-depth-3 {
+    box-shadow: 0 8px 17px 2px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12), 0 5px 5px -3px rgba(0,0,0,.2);
+}

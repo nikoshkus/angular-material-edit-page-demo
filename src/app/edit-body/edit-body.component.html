@@ -1,0 +1,41 @@
+<div class="tasks-edit-tabs edit-tabs col-sm-12">
+  <mat-tab-group>
+    <mat-tab label="TEMPLATE">
+      <div class="tab-content col-sm-12">
+        <task-template></task-template>
+      </div>
+    </mat-tab>
+    <mat-tab label="IAP & ACHIEVEMENTS">
+      <div class="tab-content col-sm-12">
+        <div class="tab-content">
+          <div class="middle-sm" *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1]">
+            <div class="file-uploader">
+              File uploader
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="MARKETING">
+      <div class="tab-content">
+        <!--          <task-marketing-->
+        <!--            [readOnly]="readOnly"-->
+        <!--          ></task-marketing>-->
+      </div>
+    </mat-tab>
+    <mat-tab label="AVAILABILITY">
+      <div class="tab-content">
+        <!--          <task-availability-->
+        <!--            [readOnly]="readOnly"-->
+        <!--          ></task-availability>-->
+      </div>
+    </mat-tab>
+    <mat-tab label="APPROVALS">
+      <div class="tab-content">
+        <!--          <task-approvals-->
+        <!--            [readOnly]="readOnly"-->
+        <!--          ></task-approvals>-->
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
