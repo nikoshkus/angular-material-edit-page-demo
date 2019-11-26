@@ -9,12 +9,14 @@
       <div class="col-sm-3 label">Title:</div>
       <div class="col-sm-9 ">
         <mat-form-field>
-          <input [value]="'Minion Rush'" #titleInput matInput 
-          
+          <input [value]="title"
+          #titleInput
+          matInput 
+          [formControl]="requiredFormControl" required
           >
-          <!-- <mat-error *ngIf="emailFormControl && emailFormControl.hasError('required')">
+          <mat-error *ngIf="requiredFormControl && requiredFormControl.hasError('required')">
             Title is <strong>required</strong>
-          </mat-error> -->
+          </mat-error>
         </mat-form-field>
       </div>
     </div>
@@ -37,7 +39,12 @@
       <div class="col-sm-3 label">Subtitle:</div>
       <div class="col-sm-9">
         <mat-form-field>
-          <input matInput [value]="'Despicable Me Official Game'">
+          <input matInput [value]="null" #subtitleInput  
+          [formControl]="requiredSubFormControl" required
+          >
+          <mat-error *ngIf="requiredSubFormControl && requiredSubFormControl.hasError('required')">
+            Subtitle is <strong>required</strong>
+          </mat-error>
         </mat-form-field>
       </div>
     </div>
@@ -187,11 +194,16 @@
       <div class="col-sm-3 label">Active CRM Campaign:</div>
       <div class="col-sm-9">
         <mat-form-field>
-          <mat-select [value]="1">
+          <mat-select [value]="1" #selectInput  
+          [formControl]="selectFormControl" required
+          >
             <mat-option *ngFor="let choice of [{id:1, name: 'Yes'}, {id:0, name: 'No'}] " [value]="choice.id">
               {{choice.name}}
             </mat-option>
           </mat-select>
+          <mat-error *ngIf="selectFormControl && selectFormControl.hasError('required')">
+            Active CRM Campaign is <strong>required</strong>
+          </mat-error>
         </mat-form-field>
       </div>
     </div>

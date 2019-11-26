@@ -45,6 +45,8 @@ export class TaskTemplateComponent implements OnDestroy, AfterViewInit {
     {name: 'Smith Smithson', id: 3}
   ]
 
+  public title= '';
+
   /** list of banks filtered by search keyword */
   public filteredGGI: ReplaySubject<Item[]> = new ReplaySubject<Item[]>(1);
 
@@ -54,13 +56,30 @@ export class TaskTemplateComponent implements OnDestroy, AfterViewInit {
   /** Subject that emits when the component has been destroyed. */
   private _onDestroy = new Subject<void>();
   
-  // public emailFormControl: FormControl = new FormControl('titleInput', [
-  //   Validators.required
-  //   ]
-  // );
+  public requiredFormControl: FormControl = new FormControl('titleInput', [
+    Validators.required
+    ]
+  );
+
+  public requiredSubFormControl: FormControl = new FormControl('subtitleInput', [
+    Validators.required
+    ]
+  );
+
+  public selectFormControl: FormControl = new FormControl('selectInput', [
+    Validators.required
+    ]
+  );
+  
 
   ngOnInit() {
+    this.requiredFormControl.setValue('');
+    this.requiredFormControl.markAsTouched();
 
+    this.requiredSubFormControl.setValue('');
+    this.requiredSubFormControl.markAsTouched();
+
+    
     // set initial selection
     this.ggiCtrl.setValue(this.ggi[1]);
     this.lpMultiCtrl.setValue(this.lp.slice(0,2));
