@@ -79,7 +79,8 @@ export class TaskTemplateComponent implements OnDestroy, AfterViewInit {
     this.requiredSubFormControl.setValue('');
     this.requiredSubFormControl.markAsTouched();
 
-    
+    this.selectFormControl.setValue(null);
+    this.selectFormControl.markAsTouched();
     // set initial selection
     this.ggiCtrl.setValue(this.ggi[1]);
     this.lpMultiCtrl.setValue(this.lp.slice(0,2));
